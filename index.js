@@ -12,15 +12,12 @@ program
   .command("generate")
   .alias("gen")
   .description("generate a new bip39 mnemonic")
-  .option(
-    "-w, --wordlist [wordlist]",
-    Object.keys(bip39.wordlists).join(" ")
-  )
+  .option("-w, --wordlist [wordlist]", Object.keys(bip39.wordlists).join(" "))
   .action(options => {
     const wordlist = bip39.wordlists[options.wordlist];
     if (!wordlist) {
-        console.error(`Invalid wordlist "${options.wordlist}" specified.`);
-        process.exit(1);
+      console.error(`Invalid wordlist "${options.wordlist}" specified.`);
+      process.exit(1);
     }
 
     console.log(bip39.generateMnemonic(null, null, wordlist));
