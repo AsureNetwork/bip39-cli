@@ -15,7 +15,7 @@ program
   .option("-w, --wordlist [wordlist]", Object.keys(bip39.wordlists).join(" "))
   .action(options => {
     const wordlist = bip39.wordlists[options.wordlist];
-    if (!wordlist) {
+    if (options.wordlist && !wordlist) {
       console.error(`Invalid wordlist "${options.wordlist}" specified.`);
       process.exit(1);
     }

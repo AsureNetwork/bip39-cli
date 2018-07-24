@@ -1,6 +1,6 @@
 {
   "name": "bip39-cli",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "simple cli tool to create, and verify bip39 mnemonics",
   "bin": {
     "bip39-cli": "./index.js"
