@@ -20,7 +20,7 @@ program
 program
   .command("validate <mnemonic>")
   .alias("val")
-  .description("valid the given bip39 mnemonic")
+  .description("validate the given bip39 mnemonic")
   .action(function(mnemonic) {
     if (bip39.validateMnemonic(mnemonic)) {
       console.log("Mnemonic is valid!");

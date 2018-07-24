@@ -16,7 +16,7 @@ bip39-cli is a simple cli tool to create, and verify bip39 mnemonics.
   Commands:
 
     generate|gen             generate a new bip39 mnemonic
-    validate|val <mnemonic>  valid the given bip39 mnemonic
+    validate|val <mnemonic>  validate the given bip39 mnemonic
 ```
 
 ## License (ISC)
