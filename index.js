@@ -12,8 +12,18 @@ program
   .command("generate")
   .alias("gen")
   .description("generate a new bip39 mnemonic")
-  .action(() => {
-    console.log(bip39.generateMnemonic());
+  .option(
+    "-w, --wordlist [wordlist]",
+    Object.keys(bip39.wordlists).join(" ")
+  )
+  .action(options => {
+    const wordlist = bip39.wordlists[options.wordlist];
+    if (!wordlist) {
+        console.error(`Invalid wordlist "${options.wordlist}" specified.`);
+        process.exit(1);
+    }
+
+    console.log(bip39.generateMnemonic(null, null, wordlist));
     process.exit(0);
   });
 
@@ -34,5 +44,5 @@ program
 program.parse(process.argv);
 
 if (!process.argv.slice(2).length) {
-    program.outputHelp();
+  program.outputHelp();
 }
