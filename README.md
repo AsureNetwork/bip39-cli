@@ -1,5 +1,7 @@
 # bip39-cli
 
+[![npm version](https://badge.fury.io/js/bip39-cli.svg)](https://badge.fury.io/js/bip39-cli)
+
 bip39-cli is a simple cli tool to create, and verify bip39 mnemonics.
 
 ## Options
