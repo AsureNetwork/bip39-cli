@@ -1,0 +1,29 @@
+{
+  "name": "bip39-cli",
+  "version": "0.1.0",
+  "description": "simple cli tool to create, and verify bip39 mnemonics",
+  "bin": {
+    "bip39-cli": "./index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bip39",
+    "mnemonic",
+    "generator",
+    "ethereum",
+    "eth",
+    "bitcoin",
+    "btc"
+  ],
+  "author": "Fabian Raetz <fabian.raetz@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "bip39": "^2.5.0",
+    "commander": "^2.16.0"
+  },
+  "devDependencies": {
+    "prettier": "^1.13.7"
+  }
+}
