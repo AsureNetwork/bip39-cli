@@ -42,8 +42,15 @@ program
   .command("validate <mnemonic>")
   .alias("val")
   .description("validate the given bip39 mnemonic")
-  .action(function(mnemonic) {
-    if (bip39.validateMnemonic(mnemonic)) {
+  .option(
+    "-w, --wordlist <wordlist>",
+    validWordlists.join(" "),
+    defaultWordlist
+  )
+  .action(function(mnemonic, options) {
+    const wordlist = parseWordlistOption(options);
+
+    if (bip39.validateMnemonic(mnemonic, wordlist)) {
       console.log("Mnemonic is valid!");
       process.exit(0);
     } else {
