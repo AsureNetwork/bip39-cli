@@ -34,7 +34,7 @@ $ bip39-cli accounts --count 9 "dentist whale pattern drastic time black cigar b
 ## Options
 
 ```
-  Usage: index [options] [command]
+  Usage: bip39-cli [options] [command]
 
   Options:
 
