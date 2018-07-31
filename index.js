@@ -6,13 +6,20 @@ const program = require("commander");
 const bip39 = require("bip39");
 const packageJson = require("./package.json");
 
+const validWordlists = Object.keys(bip39.wordlists);
+const defaultWordlist = "english";
+
 program.version(packageJson.version);
 
 program
   .command("generate")
   .alias("gen")
   .description("generate a new bip39 mnemonic")
-  .option("-w, --wordlist [wordlist]", Object.keys(bip39.wordlists).join(" "))
+  .option(
+    "-w, --wordlist <wordlist>",
+    validWordlists.join(" "),
+    defaultWordlist
+  )
   .action(options => {
     const wordlist = bip39.wordlists[options.wordlist];
     if (options.wordlist && !wordlist) {
