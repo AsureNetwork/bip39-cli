@@ -8,7 +8,7 @@ program
   .command("accounts <mnemonic>")
   .alias("acc")
   .description("print accounts with public address and private key")
-  .option("-c, --count <count>", "number of accounts", (v) =>  parseInt(v), 5)
+  .option("-c, --count <count>", "number of accounts", v => parseInt(v), 5)
   .action(function(mnemonic, options) {
     if (isNaN(options.count) || options.count <= 0) {
       console.error(`Invalid count specified.`);
