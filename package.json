@@ -1,6 +1,6 @@
 {
   "name": "bip39-cli",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "simple cli tool to create, and verify bip39 mnemonics",
   "bin": {
     "bip39-cli": "./index.js"
@@ -21,7 +21,8 @@
   "license": "ISC",
   "dependencies": {
     "bip39": "^2.5.0",
-    "commander": "^2.16.0"
+    "commander": "^2.16.0",
+    "ethereumjs-wallet": "0.6.0"
   },
   "devDependencies": {
     "prettier": "^1.13.7"

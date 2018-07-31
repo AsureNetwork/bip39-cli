@@ -2,27 +2,29 @@
 
 [![npm version](https://badge.fury.io/js/bip39-cli.svg)](https://badge.fury.io/js/bip39-cli)
 
-bip39-cli is a simple cli tool to create, and verify 
+bip39-cli is a simple cli tool to create, and verify
 [bip39 mnemonics](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki).
 
 ## Options
+
 ```
-  Usage: bip39-cli [options] [command]
+  Usage: index [options] [command]
 
   Options:
 
-    -V, --version            output the version number
-    -h, --help               output usage information
+    -V, --version                      output the version number
+    -h, --help                         output usage information
 
   Commands:
 
-    generate|gen             generate a new bip39 mnemonic
-    validate|val <mnemonic>  validate the given bip39 mnemonic
+    generate|gen [options]             generate a new bip39 mnemonic
+    validate|val [options] <mnemonic>  validate the given bip39 mnemonic
+    accounts|acc [options] <mnemonic>  print accounts with public address and private key
 ```
 
 ## License (ISC)
 
-Copyright (c) 2018 , Asure Foundation <info@asure.io>
+Copyright (c) 2018 , Asure Foundation <mailto:info@asure.io>
 
 Permission to use, copy, modify, and/or distribute this software for any
 purpose with or without fee is hereby granted, provided that the above

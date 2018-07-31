@@ -9,6 +9,7 @@ program.version(packageJson.version);
 
 require("./generate");
 require("./validate");
+require("./accounts");
 
 program.parse(process.argv);
 
