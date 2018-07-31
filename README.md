@@ -5,9 +5,14 @@
 bip39-cli is a simple cli tool to create, and verify
 [bip39 mnemonics](https://github.com/bitcoin/bips/blob/master/bip-0039.mediawiki).
 
+```
+$ npm install -g bip39-cli
+```
+
 ## Examples
 
 ```sh
+
 $ bip39-cli generate
 dentist whale pattern drastic time black cigar bike person destroy punch hungry
 
