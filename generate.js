@@ -13,9 +13,12 @@ program
     utils.validWordlists.join(" "),
     utils.defaultWordlist
   )
+  .option("--strength <strength>",
+          "strength defaults to 128 (min), max is 256, must be a multiple of 32",
+          128)
   .action(options => {
     const wordlist = utils.parseWordlistOption(options);
 
-    console.log(bip39.generateMnemonic(null, null, wordlist));
+    console.log(bip39.generateMnemonic(options.strength, null, wordlist));
     process.exit(0);
   });
