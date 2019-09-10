@@ -56,6 +56,7 @@ $ bip39-cli accounts --count 9 "dentist whale pattern drastic time black cigar b
   Options:
 
     -w, --wordlist <wordlist>  EN JA chinese_simplified chinese_traditional english french italian japanese korean spanish (default: english)
+    --strength <strength>      strength defaults to 128 (min), max is 256, must be a multiple of 32 (default: 128)
     -h, --help                 output usage information
 ```
 
